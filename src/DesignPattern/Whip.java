@@ -1,9 +1,10 @@
 package DesignPattern;
 
 public class Whip extends CondimentDecorator {
-    Beverage beverage;
+    private final Beverage beverage;
 
     public Whip(Beverage beverage) {
+        setSize(beverage.getSize());
         this.beverage = beverage;
     }
 
@@ -12,6 +13,11 @@ public class Whip extends CondimentDecorator {
     }
 
     public double cost() {
-        return beverage.cost() + .10;
+        double condimentCost = switch (getSize()) {
+            case TALL -> 0.03;
+            case GRANDE -> 0.06;
+            case VENTI -> 0.10;
+        };
+        return beverage.cost() + condimentCost;
     }
 }

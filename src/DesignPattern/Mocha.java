@@ -1,9 +1,10 @@
 package DesignPattern;
 
 public class Mocha extends CondimentDecorator {
-    Beverage beverage;
+    private final Beverage beverage;
 
     public Mocha(Beverage beverage) {
+        setSize(beverage.getSize());
         this.beverage = beverage;
     }
 
@@ -12,6 +13,11 @@ public class Mocha extends CondimentDecorator {
     }
 
     public double cost() {
-        return beverage.cost() + .20;
+        double condimentCost = switch (getSize()) {
+            case TALL -> 0.10;
+            case GRANDE -> 0.15;
+            case VENTI -> 0.20;
+        };
+        return beverage.cost() + condimentCost;
     }
 }
