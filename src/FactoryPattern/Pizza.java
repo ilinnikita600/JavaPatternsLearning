@@ -1,5 +1,6 @@
 package FactoryPattern;
 
+import FactoryPattern.PizzaIngredients.*;
 public abstract class Pizza {
     protected String name;
     Dough dough;
