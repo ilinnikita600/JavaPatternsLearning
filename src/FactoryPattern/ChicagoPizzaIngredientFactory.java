@@ -1,5 +1,7 @@
 package FactoryPattern;
 
+import FactoryPattern.PizzaIngredients.*;
+
 public class ChicagoPizzaIngredientFactory implements PizzaIngredientFactory {
     @Override
     public Dough createDough() {

@@ -1,5 +1,7 @@
 package FactoryPattern;
 
+import FactoryPattern.PizzaIngredients.*;
+
 public interface PizzaIngredientFactory {
     Dough createDough();
     Sauce createSauce();
