@@ -1,7 +1,7 @@
 package FactoryPattern;
 
 public abstract class Pizza {
-    String name;
+    protected String name;
     Dough dough;
     Sauce sauce;
     Veggies[] veggies;
