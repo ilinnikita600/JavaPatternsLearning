@@ -1,9 +1,11 @@
 package CommandPattern2;
 
 public class GarageDoor {
+    private final String place;
     private boolean light;
-    public GarageDoor() {
+    public GarageDoor(String place) {
         light = false;
+        this.place = place;
     }
     public void up() {
         System.out.println("Гаражная дверь открыта");
@@ -23,5 +25,8 @@ public class GarageDoor {
         if (light) System.out.println("Свет выключен");
         else System.out.println("Свет уже был выключен");
         light = !light;
+    }
+    public String getPlace() {
+        return place;
     }
 }

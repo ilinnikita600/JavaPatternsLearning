@@ -1,6 +1,6 @@
 package CommandPattern2;
 
-public class CeilingFanOffCommand {
+public class CeilingFanOffCommand implements Command{
     private final CeilingFan ceilingFan;
 
     public CeilingFanOffCommand(CeilingFan ceilingFan) {

@@ -1,8 +1,10 @@
 package CommandPattern2;
 
 public class Hottub {
+    private final String place;
     private int t;
-    public Hottub() {
+    public Hottub(String place) {
+        this.place = place;
         t = 0;
     }
     public void circulate() {
@@ -16,5 +18,8 @@ public class Hottub {
     }
     public void setTemperature(int t) {
         this.t = t;
+    }
+    public String getPlace() {
+        return place;
     }
 }

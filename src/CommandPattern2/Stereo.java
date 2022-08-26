@@ -1,9 +1,11 @@
 package CommandPattern2;
 
 public class Stereo {
+    private final String place;
     private int volume;
-    public Stereo() {
+    public Stereo(String place) {
         volume = 0;
+        this.place = place;
     }
     public void on() {
 
@@ -22,5 +24,8 @@ public class Stereo {
     }
     public void setVolume(int volume) {
         this.volume = volume;
+    }
+    public String getPlace() {
+        return place;
     }
 }
