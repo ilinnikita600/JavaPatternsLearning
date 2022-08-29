@@ -2,9 +2,11 @@ package CommandPattern2;
 
 public class TV {
     private int volume;
+    private final String place;
 
-    public TV() {
+    public TV(String place) {
         volume = 0;
+        this.place = place;
     }
     public void on() {
         System.out.println("Телевизор включен");
